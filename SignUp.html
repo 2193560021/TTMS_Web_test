@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/Bootstrap/animate.min.css">
+    <style>
+
+        .form-signin{
+            width: 100%;
+            max-width: 350px;
+            margin:110px auto;
+        }
+        .form-control{
+            box-sizing: border-box;
+            font-size: 19px;
+            height: 45px;
+        }
+        .form-signin input[type="email"]{
+            margin: 7px auto;
+        }
+        .form-signin input[type="password"]{
+            margin-bottom: 30px;
+        }
+        .bt{
+            width: 100%;
+            height: 45px;
+            color: #fff;
+            border: none;
+            position: relative;
+            font-size: 22px;
+            font-weight: bold;
+            background: linear-gradient(135deg,#24ff72,#2196f3);
+            transition:.1s linear all;
+        }
+        .bt:hover{
+            background: linear-gradient(135deg,#2196f3,#24ff72);
+            transform: translateY(-3px);
+            box-shadow:0 0px 10px #2196f3 ;
+        }
+        #lyy{
+            margin-top: 70px;
+        }
+    </style>
+</head>
+<body class="text-center">
+<form action="" class="form-signin">
+
+    <img src="img/场地分类-剧院.svg" alt="" class="mb-4" width="86" height="86">
+    <h1 class="h2 mb-4">剧院票务管理系统</h1>
+    <input type="email" id="inputEmail" class="form-control" placeholder="账户"  autofocus>
+    <input type="password" id="inputPassword" class="form-control" placeholder="密码" >
+
+    <a class="btn btn-secondary btn-block bt animated bounceInLeft">注册</a>
+    <a href="SignIn.html" class="btn btn-outline-secondary btn-lg btn-block animated bounceInRight">返回登录</a>
+    <p id="lyy" class="mb-3 text-muted">@2021-刘宇阳</p>
+
+    <script src="js/Bootstrap/jquery.js"></script>
+</form>
+</body>
+</html>
