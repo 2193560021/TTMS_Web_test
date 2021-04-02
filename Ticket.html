@@ -8,18 +8,14 @@
     <link rel="stylesheet" href="css/nav+left.css">
     <link rel="stylesheet" href="css/Ticket.css">
     <link rel="stylesheet" href="css/Bootstrap/animate.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow nav_top">
-    <a class="navbar-brand col-md-3 col-lg-2 px-3 name" href="#">阳珑影业票务管理系统</a>
+    <a class="navbar-brand col-md-3 col-lg-2 px-3 name" href="#">阳珑影业票务数据信息管理系统</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed float-right" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <ul class="navbar-nav px-3 float-left">
-        <li class="nav-item text-nowrap float-left mr-3">
-            <a class="nav-link " href="SignIn.html">点击登录</a>
-        </li>
-    </ul>
 </nav>
 <div class="container-fluid">
     <div class="row">
@@ -63,25 +59,118 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Statistics.html">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                            统 计 数 据
+                            数 据 统 计
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
 
+<!--        模态框-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">购买影票</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive ">
+                            <table class="table">
+                                <thead>
+                                <tr class="list_nav">
+                                    <th>电影名称</th>
+                                    <th>演出厅</th>
+                                    <th>放映时间</th>
+                                    <th>结束时间</th>
+                                    <th>所有座位</th>
+                                    <th>剩余座位</th>
+                                    <th>选择</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>唐人街探案3</td>
+                                        <td>01厅</td>
+                                        <td>3/19 08:00</td>
+                                        <td>3/19 10:00</td>
+                                        <td>180</td>
+                                        <td>104</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>唐人街探案3</td>
+                                        <td>03厅</td>
+                                        <td>3/19 08:20</td>
+                                        <td>3/19 10:20</td>
+                                        <td>150</td>
+                                        <td>134</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>唐人街探案3</td>
+                                        <td>06厅</td>
+                                        <td>3/19 08:25</td>
+                                        <td>3/19 10:25</td>
+                                        <td>150</td>
+                                        <td>98</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>唐人街探案3</td>
+                                        <td>07厅</td>
+                                        <td>3/19 09:40</td>
+                                        <td>3/19 11:40</td>
+                                        <td>100</td>
+                                        <td>49</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>唐人街探案3</td>
+                                        <td>10厅</td>
+                                        <td>3/19 11:30</td>
+                                        <td>3/19 13:30</td>
+                                        <td>120</td>
+                                        <td>104</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>唐人街探案3</td>
+                                        <td>14厅</td>
+                                        <td>3/19 11:50</td>
+                                        <td>3/19 14:20</td>
+                                        <td>130</td>
+                                        <td>79</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">手动选座</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">系统选座</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <main id="main" role="main" class="main col-md-9 ml-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
             <div class="card mt-1 mb-1 animated fadeInUp">
                 <div class="no-gutters float-left row">
-                    <a href="movie/trjta3.html" class="col-md-4 ">
+                    <a href="movie/trjta3.html" class="col-md-4 "   data-toggle="modal" data-target="#exampleModal">
                         <img src="img/p2622388983.webp" alt="..." class="col-md-12 col-sm-12 movie_list">
                     </a>
                     <div class="col-md-8 pr-2">
-                        <a href="movie/trjta3.html" class="card-body ml-3">
+                        <a href="movie/trjta3.html" class="card-body ml-3"   data-toggle="modal" data-target="#exampleModal">
                             <h4 class="card-title ml-3">唐人街探案3</h4>
                             <p class="card-text1">&nbsp;&nbsp;&nbsp;&nbsp;继曼谷、纽约之后，东京再出大案。唐人街神探唐仁（王宝强 饰）、秦风（刘昊然 饰）受侦探野田昊（妻夫木聪 饰）的邀请前往破案。“CRIMASTER世界侦探排行榜”中的侦探们闻讯后也齐聚东京，加入挑战，而排名第一Q的现身，让这个大案更加扑朔迷离，一场亚洲最强神探之间的较量即将爆笑展开……</p>
                             <small class="text-muted ml-3">上映时间：2021-02-12(中国大陆)</small>
-                            <a href="movie/trjta3.html" class="btn btn-primary float-right col-md-3 mr-3">购票</a>
+                            <a href="movie/trjta3.html" class="btn btn-primary float-right col-md-3 mr-3"   data-toggle="modal" data-target="#exampleModal">购票</a>
                         </a>
                     </div>
                 </div>
