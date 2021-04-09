@@ -20,6 +20,10 @@ a,a:hover{
     color: black;
 }
 
+.navbar-toggler{
+    top: .25rem;
+    right: 1rem;
+}
 .sidebar-sticky ul li a:hover{
     color: #eee;
 }
@@ -48,6 +52,7 @@ a,a:hover{
 }
 #sidebarMenu{
     height: 1020px;
+    z-index: 1;
 }
 .sidebar-sticky{
     height: 1020px;
